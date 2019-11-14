@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="container">
+        <section>
+            <div class="box" id="Tokenization">
+                <h1>Word_Tokenization</h1>
+                {% for w in word: %} "{{ w }}" {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <div class="box" id="stemming">
+                <h1>Sentence Tokenizing</h1>
+                {% for t in token: %} "{{ t }}" {% endfor %}
+            </div>
+        </section>
+
+
+
+        <section>
+            <div class="box" id="after_stop">
+                <h1>After Filtering Stop Words</h1>
+                {% for w in filterd: %} "{{ w }}" {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <div class="box" id="Stemming">
+                <h1>Stemming</h1>
+                {% for s in stem: %} "{{ s }}" {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <div class="box" id="pos">
+                <h1>Part Of Speech Tagging</h1>
+                {% for t in tag_list: %} "{{ t }}" {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <div class="box" id="Stemming">
+                <h1>lemmatizing</h1>
+                "{{ lemma }}"
+            </div>
+        </section>
+
+        <section>
+            <div class="box" id="Syntonyms">
+                <h1>Syntonyms</h1>
+                {% for s in synonyms: %} "{{ s }}" {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <div class="box" id="Antonyms">
+                <h1>Antonyms</h1>
+                {% for a in antonyms: %} "{{ a }}" {% endfor %}
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
